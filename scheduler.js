@@ -4,7 +4,7 @@ const fs = require('fs');
 function startScheduler(bot) {
 
   // 🗓 23 febrero 22:00
-  cron.schedule('00 22 23 2 *', () => {
+  cron.schedule('35 21 23 2 *', () => {
 
     console.log("⏰ Enviando mensaje inicial...");
 
