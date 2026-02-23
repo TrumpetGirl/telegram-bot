@@ -3,8 +3,8 @@ const fs = require('fs');
 
 function startScheduler(bot) {
 
-  // 🗓 23 febrero 22:30
-  cron.schedule('45 21 23 2 *', () => {
+  // 🗓 23 febrero 22:00
+  cron.schedule('48 21 23 2 *', () => {
     console.log("⏰ Enviando mensaje inicial...");
 
     if (!fs.existsSync('chats.json')) return;
@@ -26,8 +26,8 @@ Si quieres estar listo, deberás descifrar una serie de enigmas 🧩
     fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
   }, { timezone: "Europe/Madrid" });
 
-  // 🗓 23 febrero 22:40
-  cron.schedule('40 22 23 2 *', () => {
+  // 🗓 23 febrero 22:15
+  cron.schedule('15 22 23 2 *', () => {
     console.log("🧩 Enviando primera pista...");
 
     if (!fs.existsSync('chats.json')) return;
@@ -71,7 +71,7 @@ Ves escribiendo las palabras que encuentres.`
     fs.writeFileSync('state.json', JSON.stringify(state, null, 2));
   }, { timezone: "Europe/Madrid" });
 
-  // 🗓 25 febrero 18:00
+  // 🗓 24 febrero 18:00
   cron.schedule('00 18 25 2 *', () => {
     console.log("🕵️ Enviando tercer enigma...");
 
